@@ -7,8 +7,7 @@ services:
       - "8888:8888"
     volumes:
       - ./data:/home/sage
-    environment:
-      - PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-      - HOME=/home/sage
+    # /usr/local/bin$ cat sage-entrypoint
+    # exec sage -n jupyter --no-browser --ip='0.0.0.0' --port=8888 "$@"
     command: ["sage-jupyter"]
  
